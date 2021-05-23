@@ -1,0 +1,41 @@
+.frame {
+  background: #3d4c64;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #595959;
+  -webkit-box-shadow: -2px 3px 9px 7px lightgray;
+  -moz-box-shadow: -2px 3px 9px 7px lightgray;
+  box-shadow: -2px 3px 9px 7px lightgray;
+}
+
+.button-style {
+  position: relative;
+}
+.button-style .MuiSvgIcon-root {
+  position: absolute;
+  top: 13px;
+  left: 70px;
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .frame {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.landing{
+  position: relative;
+}
+
+.getstarted{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  width: 300px;
+}
