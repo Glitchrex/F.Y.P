@@ -1,0 +1,24 @@
+{
+    "pincode":109876,
+    "address":"pratighat nagar",
+    "networks":
+       {
+        "jio":{
+                        "signal_strength":50,
+                        "data_speed":90
+                },
+        "airtel":{
+        "signal_strength":50,
+        "data_speed":90
+                  },
+        "vi":
+             {
+        "signal_strength":50,
+        "data_speed":90
+    },
+"bsnl":{
+        "signal_strength":50,
+        "data_speed":90
+    }
+    }
+}
