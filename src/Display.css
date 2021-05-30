@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+.address {
+  text-transform: capitalize;
+}

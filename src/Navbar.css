@@ -1,0 +1,26 @@
+.navbar {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+#navbaritems {
+  padding: 14px 10px;
+  font-size: larger;
+}
+ul {
+  list-style: none;
+}
+#navbarSupportedContent {
+  float: right;
+}
+.navbar-brand{
+ font-size: xx-large;
+ font-weight: 500;
+ color: black;
+}
+/* 
+*/
+.nav-link:hover {
+  text-decoration: none;
+  transform: scale(1.02);
+}
