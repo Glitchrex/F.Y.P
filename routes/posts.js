@@ -59,12 +59,23 @@ router.post('/', async (req, res) => {
   }
 })
 
-//Find Request
+//Find Request by ID
 router.get('/:postId', async (req, res) => {
   try {
     const post = await Post.findById(req.params.postId)
     res.json(post)
-    console.log('Find Request Completed')
+    console.log('Find Request by ID Completed')
+  } catch (err) {
+    res.json({ message: err })
+  }
+})
+
+//Find Request by Pincode
+router.get('/findbypincode/:pincodee', async (req, res) => {
+  try {
+    const post = await Post.find({ pincode: req.params.pincodee })
+    res.json(post)
+    console.log('Find Request by Pincode Completed')
   } catch (err) {
     res.json({ message: err })
   }
