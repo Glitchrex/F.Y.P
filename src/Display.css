@@ -12,3 +12,14 @@
 .address {
   text-transform: capitalize;
 }
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 70vw;
+}
+.width-full {
+  width: 70%;
+}

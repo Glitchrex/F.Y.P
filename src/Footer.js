@@ -73,21 +73,7 @@ export const Footer = () => {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <LocationOnIcon />
-                      <span style={{ marginLeft: '7px' }}>
-                        Bengaluru, Karnataka
-                      </span>
-                    </p>
-                  </li>
-                  <li>
-                    <p
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        flexWrap: 'wrap',
-                      }}
-                    >
-                      <EmailIcon />
+                      <EmailIcon style={{ color: '#5DA8DC' }} />
                       <span style={{ marginLeft: '9px' }}>fyp@gmail.com</span>
                     </p>
                   </li>
@@ -99,7 +85,7 @@ export const Footer = () => {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <PhoneIcon />
+                      <PhoneIcon style={{ color: '#15D01E' }} />
                       <span style={{ marginLeft: '7px' }}>+91 1234567890</span>
                     </p>
                   </li>
@@ -111,7 +97,7 @@ export const Footer = () => {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <LocationOnIcon />
+                      <LocationOnIcon style={{ color: '#EF4B4F' }} />
                       <span style={{ marginLeft: '7px' }}>
                         Bengaluru, Karnataka
                       </span>
@@ -138,7 +124,7 @@ export const Footer = () => {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <GitHubIcon />
+                      <GitHubIcon style={{ color: 'black' }} />
                       <span style={{ marginLeft: '7px' }}>Github</span>
                     </p>
                   </li>
@@ -150,7 +136,7 @@ export const Footer = () => {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <TelegramIcon />
+                      <TelegramIcon style={{ color: '#26A7E4' }} />
                       <span style={{ marginLeft: '9px' }}>Telegram</span>
                     </p>
                   </li>
@@ -162,7 +148,7 @@ export const Footer = () => {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <InstagramIcon />
+                      <InstagramIcon style={{ color: '#EF4B4F' }} />
                       <span style={{ marginLeft: '7px' }}>Instagram</span>
                     </p>
                   </li>
@@ -174,7 +160,7 @@ export const Footer = () => {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <FacebookIcon />
+                      <FacebookIcon style={{ color: '#4867AA' }} />
                       <span style={{ marginLeft: '7px' }}>Facebook</span>
                     </p>
                   </li>
@@ -186,7 +172,7 @@ export const Footer = () => {
                         flexWrap: 'wrap',
                       }}
                     >
-                      <TwitterIcon />
+                      <TwitterIcon style={{ color: '#5DA8DC' }} />
                       <span style={{ marginLeft: '7px' }}>Twitter</span>
                     </p>
                   </li>
