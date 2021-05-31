@@ -14,7 +14,7 @@ export default function Display(props) {
 
   const getData = async () => {
     const response = await fetch(
-      `http://localhost:4000/posts/findbypincode/${state}`
+      `https://axelrestapi.herokuapp.com/posts/findbypincode/${state}`
     )
     const data = await response.json()
     console.log('data', data)
