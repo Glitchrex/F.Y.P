@@ -1,6 +1,51 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import './Feedback.scss'
+let address = createRef()
+let jiostrength = createRef()
+let jiodata = createRef()
+let airtelstrength = createRef()
+let airteldata = createRef()
+let vistrength = createRef()
+let vidata = createRef()
+let bsnlstrength = createRef()
+let bsnldata = createRef()
+let pincode = createRef()
 export default function Feedback({ user }) {
+  const handleClick = (e) => {
+    e.preventDefault()
+    // console.log(address.current.value, pincode.current.value)
+    // console.log('JIO', jiostrength.current.value, jiodata.current.value)
+    // console.log(
+    //   'Airtel',
+    //   airtelstrength.current.value,
+    //   airteldata.current.value
+    // )
+    // console.log('VI', vistrength.current.value, vidata.current.value)
+    // console.log('BSNL', bsnlstrength.current.value, bsnldata.current.value)
+    var addressPattern = '[a-zA-Z]+[ ]+[a-zA-Z]'
+    var res = new RegExp(addressPattern)
+    if (res.test(address.current.value) !== true) {
+      alert('Enter a valid address')
+      address.current.value = null
+    }
+    var pincodePattern = '^[1-9]{1}[0-9]{2}s{0,1}[0-9]{3}$'
+    var re = new RegExp(pincodePattern)
+    if (re.test(pincode.current.value) !== true) {
+      alert('Enter a valid pincode')
+      pincode.current.value = null
+    }
+
+    var dataspeedExp = '^100(.[0]{1,2})?|([0-9]|[1-9][0-9])(.[0-9]{1,2})?$'
+    var rexp = new RegExp(dataspeedExp)
+    if (rexp.test(jiodata.current.value) !== true) {
+      console.log('error')
+      alert('Data Speed Must be between 0-100Mbps')
+      jiodata.current.value = null
+      airteldata.current.value = null
+      vidata.current.value = null
+      bsnldata.current.value = null
+    }
+  }
   return (
     <div>
       <h1>Welcome to feedback</h1>
@@ -18,7 +63,7 @@ export default function Feedback({ user }) {
               Name: <span>{user?.displayName}</span>{' '}
             </p>
           </div>
-          <div className="emailid_user">
+          <div className='emailid_user'>
             <p>
               Email: <span>{user?.email}</span>{' '}
             </p>
@@ -27,14 +72,12 @@ export default function Feedback({ user }) {
       </div>
       <form className='form'>
         <div className='form-element'>
-          <label
-            style={{ float: 'left', marginRight: '10px' }}
-            for='staticEmail'
-          >
+          <label style={{ float: 'left', marginRight: '10px' }} htmlFor='email'>
             Email:
           </label>
           <br />
           <input
+            className='form-control'
             style={{
               width: '100%',
               float: 'left',
@@ -42,15 +85,18 @@ export default function Feedback({ user }) {
               marginBottom: '20px',
             }}
             type='text'
-            readonly
-            className='form-control'
+            readOnly
             id='email'
+            name='email'
             value={user?.email}
             disabled
           />
         </div>
         <div className='form-element'>
-          <label style={{ float: 'left', marginRight: '10px' }} for='address'>
+          <label
+            style={{ float: 'left', marginRight: '10px' }}
+            htmlFor='address'
+          >
             Address:
           </label>
           <br />
@@ -63,15 +109,41 @@ export default function Feedback({ user }) {
             }}
             type='text'
             className='form-control'
-            id='inputPassword'
+            id='address'
             placeholder='Address'
+            name='address'
+            ref={address}
+          />
+        </div>
+        <div className='form-element'>
+          <label
+            style={{ float: 'left', marginRight: '10px' }}
+            htmlFor='pincode'
+          >
+            Pincode:
+          </label>
+          <br />
+          <input
+            style={{
+              width: '100%',
+              float: 'left',
+              marginLeft: '0',
+              marginBottom: '20px',
+            }}
+            type='text'
+            className='form-control'
+            id='pincode'
+            placeholder='Pincode'
+            name='pincode'
+            required
+            ref={pincode}
           />
         </div>
 
         <div className='form-element'>
           <label
             style={{ float: 'left', marginRight: '10px', marginTop: '8px' }}
-            for='inputPassword'
+            htmlFor='jio'
           >
             Network Provider:
           </label>
@@ -79,14 +151,15 @@ export default function Feedback({ user }) {
             style={{ width: '30%' }}
             type='text'
             className='form-control'
-            id='inputPassword'
+            id='jio'
+            name='jio'
             value='JIO'
             disabled
           />
         </div>
         <div className='group'>
           <div className='div_one'>
-            <label style={{ float: 'left' }} for='inputPassword'>
+            <label style={{ float: 'left' }} htmlFor='jiosignal_strength'>
               Signal Strength:
             </label>
             <br />
@@ -99,8 +172,9 @@ export default function Feedback({ user }) {
               }}
               type='text'
               className='form-control'
-              id='quality'
-              placeholder='Enter value as 20, 40, 60, 80, 100'
+              id='jiosignal_strength'
+              name='jiosignal_strength'
+              ref={jiostrength}
             >
               <option value='20'>Poor</option>
               <option value='40'>Good</option>
@@ -110,7 +184,7 @@ export default function Feedback({ user }) {
             </select>
           </div>
           <div className='div_two'>
-            <label style={{ float: 'left' }} for='inputPassword'>
+            <label style={{ float: 'left' }} htmlFor='jiodata_speed'>
               Data Speed:
             </label>
             <br />
@@ -121,10 +195,12 @@ export default function Feedback({ user }) {
                 marginLeft: '0',
                 marginBottom: '20px',
               }}
-              type='text'
+              type='number'
               className='form-control'
-              id='inputPassword'
+              id='jiodata_speed'
+              name='jiodata_speed'
               placeholder='0-100Mbps'
+              ref={jiodata}
             />
           </div>
         </div>
@@ -132,7 +208,7 @@ export default function Feedback({ user }) {
         <div className='form-element'>
           <label
             style={{ float: 'left', marginRight: '10px', marginTop: '8px' }}
-            for='inputPassword'
+            htmlFor='airtel'
           >
             Network Provider:
           </label>
@@ -140,14 +216,15 @@ export default function Feedback({ user }) {
             style={{ width: '30%' }}
             type='text'
             className='form-control'
-            id='inputPassword'
+            id='airtel'
+            name='airtel'
             value='Airtel'
             disabled
           />
         </div>
         <div className='group'>
           <div className='div_one'>
-            <label style={{ float: 'left' }} for='inputPassword'>
+            <label style={{ float: 'left' }} htmlFor='airtelsignal_strength'>
               Signal Strength:
             </label>
             <br />
@@ -160,8 +237,9 @@ export default function Feedback({ user }) {
               }}
               type='text'
               className='form-control'
-              id='quality'
-              placeholder='Enter value as 20, 40, 60, 80, 100'
+              id='airtelsignal_strength'
+              name='airtelsignal_strength'
+              ref={airtelstrength}
             >
               <option value='20'>Poor</option>
               <option value='40'>Good</option>
@@ -171,7 +249,7 @@ export default function Feedback({ user }) {
             </select>
           </div>
           <div className='div_two'>
-            <label style={{ float: 'left' }} for='inputPassword'>
+            <label style={{ float: 'left' }} htmlFor='airteldata_speed'>
               Data Speed:
             </label>
             <br />
@@ -182,17 +260,19 @@ export default function Feedback({ user }) {
                 marginLeft: '0',
                 marginBottom: '20px',
               }}
-              type='text'
+              type='number'
               className='form-control'
-              id='inputPassword'
+              id='airteldata_speed'
+              name='airteldata_speed'
               placeholder='0-100Mbps'
+              ref={airteldata}
             />
           </div>
         </div>
         <div className='form-element'>
           <label
             style={{ float: 'left', marginRight: '10px', marginTop: '8px' }}
-            for='inputPassword'
+            htmlFor='vi'
           >
             Network Provider:
           </label>
@@ -200,14 +280,15 @@ export default function Feedback({ user }) {
             style={{ width: '30%' }}
             type='text'
             className='form-control'
-            id='inputPassword'
+            id='vi'
+            name='vi'
             value='VI'
             disabled
           />
         </div>
         <div className='group'>
           <div className='div_one'>
-            <label style={{ float: 'left' }} for='inputPassword'>
+            <label style={{ float: 'left' }} htmlFor='visignal_strength'>
               Signal Strength:
             </label>
             <br />
@@ -220,8 +301,9 @@ export default function Feedback({ user }) {
               }}
               type='text'
               className='form-control'
-              id='quality'
-              placeholder='Enter value as 20, 40, 60, 80, 100'
+              id='visignal_strength'
+              name='visignal_strength'
+              ref={vistrength}
             >
               <option value='20'>Poor</option>
               <option value='40'>Good</option>
@@ -231,7 +313,7 @@ export default function Feedback({ user }) {
             </select>
           </div>
           <div className='div_two'>
-            <label style={{ float: 'left' }} for='inputPassword'>
+            <label style={{ float: 'left' }} htmlFor='vidata_speed'>
               Data Speed:
             </label>
             <br />
@@ -242,17 +324,19 @@ export default function Feedback({ user }) {
                 marginLeft: '0',
                 marginBottom: '20px',
               }}
-              type='text'
+              type='number'
               className='form-control'
-              id='inputPassword'
+              id='vidata_speed'
+              name='vidata_speed'
               placeholder='0-100Mbps'
+              ref={vidata}
             />
           </div>
         </div>
         <div className='form-element'>
           <label
             style={{ float: 'left', marginRight: '10px', marginTop: '8px' }}
-            for='inputPassword'
+            htmlFor='bsnl'
           >
             Network Provider:
           </label>
@@ -260,14 +344,15 @@ export default function Feedback({ user }) {
             style={{ width: '30%' }}
             type='text'
             className='form-control'
-            id='inputPassword'
+            id='bsnl'
+            name='bsnl'
             value='BSNL'
             disabled
           />
         </div>
         <div className='group'>
           <div className='div_one'>
-            <label style={{ float: 'left' }} for='inputPassword'>
+            <label style={{ float: 'left' }} htmlFor='bsnlsignal_strength'>
               Signal Strength:
             </label>
 
@@ -281,8 +366,9 @@ export default function Feedback({ user }) {
               }}
               type='text'
               className='form-control'
-              id='quality'
-              placeholder='Enter value as 20, 40, 60, 80, 100'
+              id='bsnlsignal_strength'
+              name='bsnlsignal_strength'
+              ref={bsnlstrength}
             >
               <option value='20'>Poor</option>
               <option value='40'>Good</option>
@@ -292,7 +378,7 @@ export default function Feedback({ user }) {
             </select>
           </div>
           <div className='div_two'>
-            <label style={{ float: 'left' }} for='inputPassword'>
+            <label style={{ float: 'left' }} htmlFor='bsnldata_speed'>
               Data Speed:
             </label>
             <br />
@@ -303,14 +389,18 @@ export default function Feedback({ user }) {
                 marginLeft: '0',
                 marginBottom: '20px',
               }}
-              type='text'
+              type='number'
               className='form-control'
-              id='inputPassword'
+              name='bsnldata_speed'
+              id='bsnldata_speed'
               placeholder='0-100Mbps'
+              ref={bsnldata}
             />
           </div>
         </div>
-        <button type="submit">Submit</button>
+        <button name='submit' type='submit' onClick={(e) => handleClick(e)}>
+          Submit
+        </button>
       </form>
     </div>
   )
