@@ -32,7 +32,7 @@ export default function Search() {
             <form method='POST' id='feedback'>
               <div className='field'>
                 <input
-                  name='pincode'
+                  name='pincode' style={{marginLeft:"0"}}
                   id='pincode'
                   value={pincode}
                   onChange={({ target }) => setPincode(target.value)}

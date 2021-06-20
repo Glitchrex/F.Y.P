@@ -16,17 +16,17 @@ export default function Navbar() {
             </li>
             <li id='navbaritems' className='nav-item'>
               <a className='nav-link' href='/'>
-                About
+                About Us
+              </a>
+            </li>
+            <li id='navbaritems' className='nav-item'>
+              <a className='nav-link' href='/'>
+                Info
               </a>
             </li>
             <li id='navbaritems' className='nav-item'>
               <a className='nav-link' href='/'>
                 Contact
-              </a>
-            </li>
-            <li id='navbaritems' className='nav-item'>
-              <a className='nav-link' href='/'>
-                Feedback
               </a>
             </li>
           </ul>

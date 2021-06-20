@@ -1,0 +1,62 @@
+* { box-sizing: border-box; }
+
+$signal-strength-bar-height: 50px;
+$signal-strength-bar-width: 80px;
+
+.sizing-box {
+  height: $signal-strength-bar-height;
+  width: $signal-strength-bar-width;
+}
+
+.signal-bars {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+}
+
+.signal-bars .bar {
+  width: 14%;
+  margin-left: 4%;
+  min-height: 20%;
+  display: inline-block;
+  border-radius: 19px;
+}
+.signal-bars .bar.first-bar  { height: 20%; }
+.signal-bars .bar.second-bar { height: 40%; }
+.signal-bars .bar.third-bar  { height: 60%; }
+.signal-bars .bar.fourth-bar { height: 80%; }
+.signal-bars .bar.fifth-bar  { height: 99%; }
+
+
+.poor .bar {
+  background-color: #e74c3c;
+  border: thin solid darken(#e74c3c, 20%);
+}
+
+.good .bar{
+  background-color: #F48024;
+  border: thin solid darken(#F48024, 20%);
+}
+.better .bar {
+  background-color: #f1c40f;
+  border: thin solid darken(#f1c40f, 7%);
+}
+
+.best .bar {
+  background-color: #4CA6E8;
+  border: thin solid darken(#4CA6E8, 7%);
+}
+
+.excellent .bar{
+  background-color: #1AD13E;
+  border: thin solid darken(#1AD13E, 7%);
+}
+
+.four-bars .bar.fifth-bar,
+.three-bars .bar.fifth-bar,
+.three-bars .bar.fourth-bar,
+.one-bar .bar:not(.first-bar),
+.two-bars .bar:not(.first-bar):not(.second-bar) {       
+  background-color: #fafafa;
+  border: thin solid #f3f3f3;
+}

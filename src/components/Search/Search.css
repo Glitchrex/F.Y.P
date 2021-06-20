@@ -9,7 +9,7 @@ body {
   align-items: center;
 }
 .main {
-  background-image: url('cell.png');
+  background: url('../../assets/cell.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 500px;
@@ -136,10 +136,9 @@ button:focus {
   font-size: 24px !important;
 }
 
-.button-style{
+.button-style {
   position: relative;
 }
-
 
 .button-style .MuiSvgIcon-root {
   position: absolute;

@@ -13,11 +13,11 @@ export const Footer = () => {
   return (
     <>
       <hr />
-      <footer class='page-footer font-small mdb-color lighten-3 pt-4'>
-        <div class='container text-center text-md-left'>
-          <div class='row'>
-            <div class='col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1'>
-              {/* <h5 class='font-weight-bold text-uppercase mb-4'>
+      <footer className='page-footer font-small mdb-color lighten-3 pt-4'>
+        <div className='container text-center text-md-left'>
+          <div className='row'>
+            <div className='col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1'>
+              {/* <h5 className='font-weight-bold text-uppercase mb-4'>
                 Footer Content
               </h5> */}
               <p>Accessing Signal and giving location of device</p>
@@ -29,10 +29,10 @@ export const Footer = () => {
               </p>
             </div>
 
-            <div class='col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1'>
-              <h5 class='font-weight-bold text-uppercase mb-4'>About</h5>
+            <div className='col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1'>
+              <h5 className='font-weight-bold text-uppercase mb-4'>About</h5>
 
-              <ul class='list-unstyled'>
+              <ul className='list-unstyled'>
                 <li>
                   <p>
                     <a href='#!'>PROJECTS</a>
@@ -58,13 +58,13 @@ export const Footer = () => {
 
             <div
               id='addresscolumn'
-              class='col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1'
+              className='col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1'
             >
               <div>
-                <h5 class='font-weight-bold text-uppercase mb-4'>Address</h5>
+                <h5 className='font-weight-bold text-uppercase mb-4'>Address</h5>
               </div>
               <div>
-                <ul class='list-unstyled'>
+                <ul className='list-unstyled'>
                   <li>
                     <p
                       style={{
@@ -109,13 +109,13 @@ export const Footer = () => {
 
             <div
               id='addresscolumn'
-              class='col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1'
+              className='col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1'
             >
               <div>
-                <h5 class='font-weight-bold text-uppercase mb-4'>Follow Us</h5>
+                <h5 className='font-weight-bold text-uppercase mb-4'>Follow Us</h5>
               </div>
               <div>
-                <ul class='list-unstyled'>
+                <ul className='list-unstyled'>
                   <li>
                     <p
                       style={{
@@ -183,22 +183,22 @@ export const Footer = () => {
         </div>
         <div
           style={{ marginBottom: '20px' }}
-          class='footer-copyright  text-center py-3'
+          className='footer-copyright  text-center py-3'
         >
           © 2020 Copyright:
           <a href='https://github.com/cleverabhi'> Final Year Project</a>
         </div>
       </footer>
-      {/* <footer class="page-footer font-small stylish-color-dark pt-4">
-  <div class="container text-center text-md-left">
-    <div class="row">
-      <hr class="clearfix w-100 d-md-none"/>
+      {/* <footer className="page-footer font-small stylish-color-dark pt-4">
+  <div className="container text-center text-md-left">
+    <div className="row">
+      <hr className="clearfix w-100 d-md-none"/>
 
-      <div class="col-md-2 mx-auto">
+      <div className="col-md-2 mx-auto">
 
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+        <h5 className="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
 
-        <ul class="list-unstyled">
+        <ul className="list-unstyled">
           <li>
             <a href='/' >Link 1</a>
           </li>
@@ -215,13 +215,13 @@ export const Footer = () => {
 
       </div>
 
-      <hr class="clearfix w-100 d-md-none"/>
+      <hr className="clearfix w-100 d-md-none"/>
 
-      <div class="col-md-2 mx-auto">
+      <div className="col-md-2 mx-auto">
 
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+        <h5 className="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
 
-        <ul class="list-unstyled">
+        <ul className="list-unstyled">
           <li>
             <a href='/' >Link 1</a>
           </li>
@@ -238,13 +238,13 @@ export const Footer = () => {
 
       </div>
 
-      <hr class="clearfix w-100 d-md-none"/>
+      <hr className="clearfix w-100 d-md-none"/>
 
-      <div class="col-md-2 mx-auto">
+      <div className="col-md-2 mx-auto">
 
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+        <h5 className="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
 
-        <ul class="list-unstyled">
+        <ul className="list-unstyled">
           <li>
             <a href='/' >Link 1</a>
           </li>
@@ -266,45 +266,45 @@ export const Footer = () => {
   </div>
 
   <hr/>
-  <ul class="list-unstyled list-inline text-center py-2">
-    <li class="list-inline-item">
-      <h5 class="mb-1">Register for free</h5>
+  <ul className="list-unstyled list-inline text-center py-2">
+    <li className="list-inline-item">
+      <h5 className="mb-1">Register for free</h5>
     </li>
-    <li class="list-inline-item">
-      <a href='/'  class="btn btn-danger btn-rounded">Sign up!</a>
+    <li className="list-inline-item">
+      <a href='/'  className="btn btn-danger btn-rounded">Sign up!</a>
     </li>
   </ul>
 
   <hr/>
 
-  <ul class="list-unstyled list-inline text-center">
-    <li class="list-inline-item">
-      <a href='/' class="btn-floating btn-fb mx-1">
-        <i class="fab fa-facebook-f"> </i>
+  <ul className="list-unstyled list-inline text-center">
+    <li className="list-inline-item">
+      <a href='/' className="btn-floating btn-fb mx-1">
+        <i className="fab fa-facebook-f"> </i>
       </a>
     </li>
-    <li class="list-inline-item">
-      <a href='/' class="btn-floating btn-tw mx-1">
-        <i class="fab fa-twitter"> </i>
+    <li className="list-inline-item">
+      <a href='/' className="btn-floating btn-tw mx-1">
+        <i className="fab fa-twitter"> </i>
       </a>
     </li>
-    <li class="list-inline-item">
-      <a href='/' class="btn-floating btn-gplus mx-1">
-        <i class="fab fa-google-plus-g"> </i>
+    <li className="list-inline-item">
+      <a href='/' className="btn-floating btn-gplus mx-1">
+        <i className="fab fa-google-plus-g"> </i>
       </a>
     </li>
-    <li class="list-inline-item">
-      <a href='/' class="btn-floating btn-li mx-1">
-        <i class="fab fa-linkedin-in"> </i>
+    <li className="list-inline-item">
+      <a href='/' className="btn-floating btn-li mx-1">
+        <i className="fab fa-linkedin-in"> </i>
       </a>
     </li>
-    <li class="list-inline-item">
-      <a href='/' class="btn-floating btn-dribbble mx-1">
-        <i class="fab fa-dribbble"> </i>
+    <li className="list-inline-item">
+      <a href='/' className="btn-floating btn-dribbble mx-1">
+        <i className="fab fa-dribbble"> </i>
       </a>
     </li>
   </ul>
-  <div style={{marginBottom:"20px"}} class="footer-copyright text-center py-3">© 2020 Copyright:
+  <div style={{marginBottom:"20px"}} className="footer-copyright text-center py-3">© 2020 Copyright:
     <a href='/' > Signal Detector</a>
   </div>
 </footer> */}

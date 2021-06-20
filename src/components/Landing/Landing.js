@@ -15,10 +15,10 @@ export default function Landing() {
             width='300'
             height='450'
           ></iframe>
-          <div class='getstarted'>
+          <div className='getstarted'>
             <Link to='/pincode' type='submit'>
-              <button>
-                <div className='button-style'>
+              <button className='button-style'>
+                <div>
                   Get Started
                   <KeyboardArrowRightIcon />
                 </div>
