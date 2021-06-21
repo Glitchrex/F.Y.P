@@ -28,7 +28,7 @@ function App() {
           <Route exact path='/feedbackform' component={FeedbackForm} />
           <Route exact path='/feedback'>
             {console.log(user)}
-            {!user ? <Feedback user={user} /> : <Error />}
+            {user ? <Feedback user={user} /> : <Error />}
           </Route>
           <Route exact path='/*'>
             <Navbar />

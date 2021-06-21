@@ -45,6 +45,32 @@ export default function Feedback({ user }) {
       vidata.current.value = null
       bsnldata.current.value = null
     }
+
+    var output = `
+    {
+      "pincode":${pincode.current.value},
+      "address":"${address.current.value}",
+      "networks":{
+        "jio":{
+        "signal_strength":${jiostrength.current.value},
+        "data_speed":${jiodata.current.value},
+       },
+        "airtel":{
+        "signal_strength":${airtelstrength.current.value},
+        "data_speed":${airteldata.current.value},
+       },
+        "vi":{
+        "signal_strength":${vistrength.current.value},
+        "data_speed":${vidata.current.value},
+        },
+        "bsnl":{
+        "signal_strength":${bsnlstrength.current.value},
+        "data_speed":${bsnldata.current.value}
+               } 
+      }
+    }`
+    const object = JSON.parse(output)
+    console.log(object)
   }
   return (
     <div>

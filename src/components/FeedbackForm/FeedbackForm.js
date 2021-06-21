@@ -33,11 +33,11 @@ export default function FeedbackForm(props) {
   const { state } = props.location
   return (
     <div>
-      <p>
+      <p style={{fontSize:"large"}}>
         You were looking for pincode "<span>{state || '......'}</span> "
       </p>
       <h4>
-        You will be redirected to fill the feedback form to help others find
+        You will be redirected to fill the feedback form to help others <br /> find
         data related to Network Providers at Pincode: "{' '}
         <span>{state || '......'}</span> "
       </h4>
