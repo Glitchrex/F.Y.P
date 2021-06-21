@@ -53,22 +53,23 @@ export default function Feedback({ user }) {
       "networks":{
         "jio":{
         "signal_strength":${jiostrength.current.value},
-        "data_speed":${jiodata.current.value},
+        "data_speed":${jiodata.current.value}
        },
         "airtel":{
         "signal_strength":${airtelstrength.current.value},
-        "data_speed":${airteldata.current.value},
+        "data_speed":${airteldata.current.value}
        },
         "vi":{
         "signal_strength":${vistrength.current.value},
-        "data_speed":${vidata.current.value},
+        "data_speed":${vidata.current.value}
         },
         "bsnl":{
         "signal_strength":${bsnlstrength.current.value},
         "data_speed":${bsnldata.current.value}
-               } 
+        } 
       }
     }`
+    console.log(output)
     const object = JSON.parse(output)
     console.log(object)
   }
