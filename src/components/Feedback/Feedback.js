@@ -1,5 +1,6 @@
 import React, { createRef } from 'react'
 import './Feedback.scss'
+import axios from 'axios'
 let address = createRef()
 let jiostrength = createRef()
 let jiodata = createRef()
@@ -11,7 +12,7 @@ let bsnlstrength = createRef()
 let bsnldata = createRef()
 let pincode = createRef()
 export default function Feedback({ user }) {
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault()
     // console.log(address.current.value, pincode.current.value)
     // console.log('JIO', jiostrength.current.value, jiodata.current.value)
@@ -72,6 +73,13 @@ export default function Feedback({ user }) {
     console.log(output)
     const object = JSON.parse(output)
     console.log(object)
+
+    const response = await axios.post(
+      'https://axelrestapi.herokuapp.com/posts',
+      object,
+      { headers: { 'Content-Type': 'application/json' } }
+    )
+    console.log(response.data)
   }
   return (
     <div>

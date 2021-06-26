@@ -6,6 +6,7 @@ import Jio from '../../assets/jio.png'
 import Airtel from '../../assets/airtel.png'
 import Vi from '../../assets/vi.png'
 import Bsnl from '../../assets/bsnl.png'
+import { BeatLoader } from 'react-spinners'
 import {
   Poor,
   Good,
@@ -15,6 +16,7 @@ import {
 } from '../SignalStrength/SignalStrength'
 
 export default function Display(props) {
+  const [visible, setVisible] = useState(false)
   const { state } = props.location
   const pincodeValue = state
   const [fetchedData, setFetchedData] = useState()
@@ -27,7 +29,11 @@ export default function Display(props) {
   let Signalname = ''
   let Datavalue = 0
   let Dataname = ''
-
+  useEffect(() => {
+    setTimeout(() => {
+      setVisible(true)
+    }, 12000)
+  }, [])
   useEffect(() => {
     getData()
     // eslint-disable-next-line
@@ -129,7 +135,7 @@ export default function Display(props) {
       </div>
       {length ? (
         fetchedData ? (
-          <>
+          <div delay={4000}>
             <h6>
               Search results for pincode " <span>{state}</span> "
             </h6>
@@ -174,7 +180,7 @@ export default function Display(props) {
 
                       {/* <br /> */}
                       <h4>
-                        Data: {fetchedData[0].networks.jio.data_speed}Mbps
+                        Data: {fetchedData[0]?.networks.jio.data_speed}Mbps
                       </h4>
                     </div>
                   </div>
@@ -291,11 +297,11 @@ export default function Display(props) {
                 <div>New Pincode</div>
               </button>
             </Link>
-          </>
+          </div>
         ) : null
-      ) : (
+      ) : visible ? (
         <>
-          <div className='error'>
+          <div className='error' delay={5000}>
             <h6 className='width-full'>
               No Search results for pincode " <span>{state}</span> "
             </h6>
@@ -325,6 +331,8 @@ export default function Display(props) {
             </div>
           </div>
         </>
+      ) : (
+        <BeatLoader loading />
       )}
     </>
   )

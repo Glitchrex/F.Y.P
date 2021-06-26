@@ -1,20 +1,15 @@
-/* footer div {
-  height: 500px;
-  width: 100%;
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-
-i{
- font-size: larger;
- z-index: 999;
- height: 200px;
- width: 200px;
- color: black;
- background-color: brown;
-} */
-
-#addresscolumn{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+.footer_content{
+  height: 100%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }

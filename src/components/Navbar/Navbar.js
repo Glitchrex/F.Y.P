@@ -12,14 +12,6 @@ export default function Navbar() {
           </div>
 
           <div className='navbar-insert' id='navbarSupportedContent'>
-            {/* <div className='onnavbar-collapse'>
-              <select className='select-operator' name='' id=''>
-                <option value=''>Home</option>
-                <option value=''>About Us</option>
-                <option value=''>Info</option>
-                <option value=''>Contact</option>
-              </select>
-            </div> */}
             <ul className='navbar-nav mr-auto'>
               <li id='navbaritems' className='nav-item active'>
                 <a className='nav-link' href='/'>
@@ -27,7 +19,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li id='navbaritems' className='nav-item'>
-                <a className='nav-link' href='/'>
+                <a className='nav-link' href='#about'>
                   About Us
                 </a>
               </li>
@@ -37,7 +29,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li id='navbaritems' className='nav-item'>
-                <a className='nav-link' href='/'>
+                <a className='nav-link' href='#contact'>
                   Contact
                 </a>
               </li>
