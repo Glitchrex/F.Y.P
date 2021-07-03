@@ -4,9 +4,13 @@ export default function Navbar() {
   return (
     <>
       <nav className='navbar navbar-expand-lg navbar-light bg-light'>
-        <div className="nav-items">
-          <div className="item_one">
-            <a className='navbar-brand' style={{fontSize:"xx-large"}} href='/'>
+        <div className='nav-items'>
+          <div className='item_one'>
+            <a
+              className='navbar-brand'
+              style={{ fontSize: 'xx-large' }}
+              href='/'
+            >
               Signal Detector
             </a>
           </div>
@@ -24,8 +28,8 @@ export default function Navbar() {
                 </a>
               </li>
               <li id='navbaritems' className='nav-item'>
-                <a className='nav-link' href='/'>
-                  Info
+                <a className='nav-link' href='#insights'>
+                  Insights
                 </a>
               </li>
               <li id='navbaritems' className='nav-item'>

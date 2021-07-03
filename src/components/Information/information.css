@@ -1,0 +1,23 @@
+.bodyofinfo{
+ display: flex;
+ flex-direction: column;
+ float: left;
+ width:60% ;
+}
+.android_group{
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: center;
+}
+.android-images{
+ width: 200px;
+ height: 400px;
+ margin: 10px;
+}
+.ptag{
+ text-align: left;
+ margin-left: 10px;
+ font-size: larger;
+ word-wrap: break-word;
+}

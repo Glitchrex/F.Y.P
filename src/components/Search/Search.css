@@ -93,7 +93,7 @@ body {
   border-radius: 25px;
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
 }
-.field input:focus {
+.field input:hover {
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff73;
 }
 .field span {
@@ -129,7 +129,7 @@ button {
   color: #595959;
   box-shadow: 2px 2px 5px #babecc, -5px -5px 10px #ffffff73;
 }
-button:focus {
+button:hover {
   color: #3498db;
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
 }

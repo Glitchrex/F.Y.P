@@ -44,7 +44,7 @@ export const Footer = () => {
               </li>
               <li>
                 <p>
-                  <a href='#!'>ABOUT US</a>
+                  <a href='#!'>SYSTEM DESIGN</a>
                 </p>
               </li>
               <li>
@@ -258,11 +258,10 @@ export const Footer = () => {
         </div>
         <hr />
         <div
-          style={{ marginBottom: '20px' }}
+          style={{ marginBottom: '20px', fontSize:"large" }}
           className='footer-copyright  text-center py-3'
         >
-          © 2021 Copyright:
-          <a href='https://github.com/cleverabhi'> Final Year Project</a>
+          © 2021 <a href='https://github.com/cleverabhi'> Final Year Project</a>
         </div>
       </footer>
     </>

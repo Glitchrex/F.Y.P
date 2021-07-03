@@ -32,7 +32,7 @@ export default function Display(props) {
   useEffect(() => {
     setTimeout(() => {
       setVisible(true)
-    }, 12000)
+    }, 5000)
   }, [])
   useEffect(() => {
     getData()
