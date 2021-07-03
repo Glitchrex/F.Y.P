@@ -292,7 +292,7 @@ export default function Display(props) {
               </div>
             </div>
             {/* <div>{getnewFunc()}</div> */}
-            <Link to='/pincode' type='submit'>
+            <Link to='/search' type='submit'>
               <button style={{ width: '50%' }}>
                 <div>New Pincode</div>
               </button>
@@ -310,7 +310,7 @@ export default function Display(props) {
                 Sorry!We were unable to found any Network Providers Data in your
                 Area. Try searching with different Pincode
               </h4>
-              <Link to='/pincode' type='submit'>
+              <Link to='/search' type='submit'>
                 <button style={{ width: '80%' }}>
                   <div>New Pincode</div>
                 </button>

@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import './Search.css'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import SearchIcon from '@material-ui/icons/Search'
 import { Link } from 'react-router-dom'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
-export default function Search() {
+export default function Search({ props }) {
   const history = useHistory()
-  const [pincode, setPincode] = useState('')
+  const location = useLocation()
+  var pin=location.state ? location.state :null
+ 
+  const [pincode, setPincode] = useState(pin)
   const handlePincode = (e) => {
     e.preventDefault()
     let pincodeval = document.querySelector('#pincode')
@@ -32,7 +35,8 @@ export default function Search() {
             <form method='POST' id='feedback'>
               <div className='field'>
                 <input
-                  name='pincode' style={{marginLeft:"0"}}
+                  name='pincode'
+                  style={{ marginLeft: '0' }}
                   id='pincode'
                   value={pincode}
                   onChange={({ target }) => setPincode(target.value)}

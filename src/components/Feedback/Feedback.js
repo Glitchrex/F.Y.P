@@ -1,6 +1,7 @@
 import React, { createRef } from 'react'
 import './Feedback.scss'
 import axios from 'axios'
+import { useHistory, useLocation } from 'react-router-dom'
 let address = createRef()
 let jiostrength = createRef()
 let jiodata = createRef()
@@ -12,6 +13,9 @@ let bsnlstrength = createRef()
 let bsnldata = createRef()
 let pincode = createRef()
 export default function Feedback({ user }) {
+  const history = useHistory()
+   const location = useLocation()
+   var pin = location.state ? location.state : null
   const handleClick = async (e) => {
     e.preventDefault()
     // console.log(address.current.value, pincode.current.value)
@@ -28,23 +32,55 @@ export default function Feedback({ user }) {
     if (res.test(address.current.value) !== true) {
       alert('Enter a valid address')
       address.current.value = null
+      return 
     }
     var pincodePattern = '^[1-9]{1}[0-9]{2}s{0,1}[0-9]{3}$'
     var re = new RegExp(pincodePattern)
     if (re.test(pincode.current.value) !== true) {
       alert('Enter a valid pincode')
       pincode.current.value = null
+      return
     }
 
-    var dataspeedExp = '^100(.[0]{1,2})?|([0-9]|[1-9][0-9])(.[0-9]{1,2})?$'
-    var rexp = new RegExp(dataspeedExp)
-    if (rexp.test(jiodata.current.value) !== true) {
-      console.log('error')
-      alert('Data Speed Must be between 0-100Mbps')
+    if (
+      jiodata.current.value > 50 ||
+      jiodata.current.value < 0 ||
+      jiodata.current.value === ''
+    ) {
+      alert(' JIO data speed must be between 0-50Mbps')
+
       jiodata.current.value = null
-      airteldata.current.value = null
+      return
+    }
+    if (
+      vidata.current.value > 50 ||
+      vidata.current.value < 0 ||
+      vidata.current.value === ''
+    ) {
+      alert(' VI data speed must be between 0-50Mbps')
+
       vidata.current.value = null
+      return
+    }
+    if (
+      airteldata.current.value > 50 ||
+      airteldata.current.value < 0 ||
+      airteldata.current.value === ''
+    ) {
+      alert(' Airtel data speed must be between 0-50Mbps')
+
+      airteldata.current.value = null
+      return
+    }
+    if (
+      bsnldata.current.value > 50 ||
+      bsnldata.current.value < 0 ||
+      bsnldata.current.value === ''
+    ) {
+      alert(' BSNL data speed must be between 0-50Mbps')
+
       bsnldata.current.value = null
+      return
     }
 
     var output = `
@@ -74,12 +110,26 @@ export default function Feedback({ user }) {
     const object = JSON.parse(output)
     console.log(object)
 
-    const response = await axios.post(
-      'https://axelrestapi.herokuapp.com/posts',
-      object,
-      { headers: { 'Content-Type': 'application/json' } }
-    )
-    console.log(response.data)
+    var confirm = window.confirm('Are you sure you have entered correct data ?')
+    console.log(confirm)
+    if (confirm === true) {
+      const response = await axios
+        .post('https://axelrestapi.herokuapp.com/posts', object, {
+          headers: { 'Content-Type': 'application/json' },
+        })
+        .then((data) => {
+          if (data) {
+            alert('Thank you for you valuable response')
+          } else {
+            alert(' Something went wrong!!! Please try again.')
+          }
+
+          history.push({ pathname: '/search', state: pincode.current.value })
+        })
+      console.log(response)
+    }else{
+      return
+    }
   }
   return (
     <div>
@@ -170,7 +220,9 @@ export default function Feedback({ user }) {
             id='pincode'
             placeholder='Pincode'
             name='pincode'
+            value={pin}
             required
+            disabled
             ref={pincode}
           />
         </div>

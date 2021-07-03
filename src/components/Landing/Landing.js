@@ -19,7 +19,7 @@ window.scrollTo(0, 0)
             height='450'
           ></iframe>
           <div className='getstarted'>
-            <Link to='/pincode' type='submit'>
+            <Link to='/search' type='submit'>
               <button className='button-style'>
                 <div>
                   Get Started
@@ -832,6 +832,8 @@ window.scrollTo(0, 0)
             </div>
           </div>
         </div>
+        <hr />
+        <h1 id='insights'>Insights</h1>
         <div className='insights'>
           <div style={{ height: '100%' }} className='insights_content'>
             <div data-aos='fade-right' className='service_logo'>
@@ -1031,24 +1033,28 @@ window.scrollTo(0, 0)
             </div>
             <div data-aos='fade-left' className='service_body' id='insights'>
               <div>
-                <h1>Insights</h1>
-              </div>
-              <div>
                 <h4>
                   Do you Know? Signal bars on your phone aren’t the most
-                  accurate representation of your network strength. In reality,
-                  every smartphone company employs different scales for bars-
-                  that’s the reason why you see a variation in the bar count on
-                  your friend’s phone running the same operator as you.
+                  accurate representation of your network strength.
+                  <span className='hideart'>
+                    In reality, every smartphone company employs different
+                    scales for bars- that’s the reason why you see a variation
+                    in the bar count on your friend’s phone running the same
+                    operator as you.
+                  </span>
                 </h4>
               </div>
               <div className='learn_more'>
-                <button
-                  className='buttonsStyle'
-                  style={{ paddingLeft: '10px', paddingRight: '10px' }}
+                <Link
+                  to='/information'
+                  style={{
+                    textDecoration: 'underline',
+                    color: '#blue',
+                    fontSize: '15px',
+                  }}
                 >
-                  <Link to='/information' style={{textDecoration:"none", color:"#3f3d36"}}>Learn more</Link>
-                </button>
+                  Tap to learn more
+                </Link>
               </div>
             </div>
           </div>

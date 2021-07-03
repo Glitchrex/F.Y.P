@@ -12,6 +12,7 @@
 .maps {
   /* background: url('../../assets/background.jpg'); */
   height: 600px;
+  width: 98%;
 
 }
 
@@ -97,11 +98,22 @@ img {
   .service_content {
     display: flex;
     flex-direction: column;
+    width: 97%;
   }
 
   .service_content_wise{
     display: flex;
     flex-direction: column-reverse;
+  }
+  .insights_content{
+    display: flex;
+    flex-direction: column;
+  }
+  .hideart{
+    display: none;
+  }
+  .landing{
+    width: 99% !important;
   }
 }
 .learn_more{

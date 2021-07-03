@@ -28,7 +28,7 @@ Aos.init({duration:2000})
             <Landing />
             <Footer />
           </Route>
-          <Route exact path='/pincode'>
+          <Route exact path='/search'>
             <Search />
           </Route>
           <Route exact path='/result' component={Display} />

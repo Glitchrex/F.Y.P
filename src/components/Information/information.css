@@ -4,6 +4,11 @@
  float: left;
  width:60% ;
 }
+@media (max-width: 500px) {
+.bodyofinfo{
+ width:97% ;
+}
+}
 .android_group{
 display: flex;
 flex-wrap: wrap;
