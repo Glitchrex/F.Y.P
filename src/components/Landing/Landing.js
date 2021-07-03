@@ -26,7 +26,7 @@ export default function Landing() {
           </div>
         </div>
         <hr />
-        <div className='Sections' id="about">
+        <div className='Sections' id='about'>
           <div className='service_group'>
             <div className='service_content'>
               <div className='service_logo'>
@@ -223,12 +223,14 @@ export default function Landing() {
                   <h6>To know about Network providers</h6>
                 </div>
                 <div className='learn_more'>
-                  <button style={{ margin: '15px' }}>Learn more</button>
+                  <button style={{ paddingLeft: '10px', paddingRight: '10px' }}>
+                    Learn more
+                  </button>
                 </div>
               </div>
             </div>
             <br />
-            <div className='service_content'>
+            <div className='service_content service_content_wise'>
               <div className='service_body'>
                 <div>
                   <h4>Get Information about Services</h4>
@@ -238,7 +240,9 @@ export default function Landing() {
                   <h6>Across various devices</h6>
                 </div>
                 <div className='learn_more'>
-                  <button style={{ margin: '15px' }}>Learn more</button>
+                  <button style={{ paddingLeft: '10px', paddingRight: '10px' }}>
+                    Learn more
+                  </button>
                 </div>
               </div>
               <div className='service_logo'>
@@ -740,7 +744,12 @@ export default function Landing() {
                   </h6>
                 </div>
                 <div className='learn_more'>
-                  <button className="learn_more_button" style={{ margin: '15px' }}>Learn more</button>
+                  <button
+                    className='learn_more_button'
+                    style={{ paddingLeft: '10px', paddingRight: '10px' }}
+                  >
+                    Learn more
+                  </button>
                 </div>
               </div>
             </div>

@@ -7,12 +7,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .main {
-  background: url('../../assets/cell.png');
+  /* background: url('../../assets/cell.png');
+  background-image: 100%; */
   background-repeat: no-repeat;
   background-size: cover;
-  width: 500px;
+  width: 100%;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -145,3 +147,4 @@ button:focus {
   top: 13px;
   left: 70px;
 }
+

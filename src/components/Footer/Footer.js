@@ -16,21 +16,25 @@ export const Footer = () => {
   return (
     <>
       <hr />
-      <footer id="contact">
+      <footer id='contact'>
         <div className='footer'>
           <div className='footer_content'>
-            <p>Accessing Signal and giving location of device</p>
-            <br />
+            <h4>Accessing Signal and giving location of device</h4>
+            
             <p>
               The main idea behind our project is to help everyone to stay
-              connected by accessing their location in order to provide accurate
+              connected by providing them 
               details of all the available Service providers in their area for
               calling and internet connectivity.
+
+            </p>
+            <p>
+              For the time being we have limited data, but you can also contribute by providing us info. It would be a great help if you contribute.
             </p>
           </div>
 
           <div className='footer_content'>
-            <h5 className='footer_ch'>About us</h5>
+            <h4 className='footer_ch'>About us</h4>
 
             <ul className='footer_cb'>
               <li>
@@ -67,7 +71,7 @@ export const Footer = () => {
           </div>
 
           <div className='footer_content'>
-            <h5 className='footer_ch'>Contact us</h5>
+            <h4 className='footer_ch'>Contact us</h4>
             <div>
               <ul className='list-unstyled'>
                 <li>
@@ -79,7 +83,9 @@ export const Footer = () => {
                     }}
                   >
                     <EmailIcon style={{ color: '#5DA8DC' }} />
-                    <span style={{ marginLeft: '9px' }}>fyp@gmail.com</span>
+                    <span style={{ marginLeft: '9px' }}>
+                      <a href='mailto: fyp@gmail.com'>fyp@gmail.com</a>
+                    </span>
                   </p>
                 </li>
                 <li>
@@ -91,7 +97,9 @@ export const Footer = () => {
                     }}
                   >
                     <PhoneIcon style={{ color: '#15D01E' }} />
-                    <span style={{ marginLeft: '7px' }}>+91 1234567890</span>
+                    <span style={{ marginLeft: '7px' }}>
+                      <a href='tel:+91 1234567890'>+91 1234567890</a>
+                    </span>
                   </p>
                 </li>
                 <li>
@@ -104,7 +112,15 @@ export const Footer = () => {
                   >
                     <LocationOnIcon style={{ color: '#EF4B4F' }} />
                     <span style={{ marginLeft: '7px' }}>
-                      Karnataka, India
+                      {' '}
+                      <a
+                        href='https://www.google.com/maps/place/Karnataka/@15.0062597,74.0733686,7z/data=!3m1!4b1!4m5!3m4!1s0x3ba35a4c37bf488f:0x41f1d28cd1757cd5!8m2!3d15.3172775!4d75.7138884'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        {' '}
+                        Karnataka, India
+                      </a>
                     </span>
                   </p>
                 </li>
@@ -117,7 +133,11 @@ export const Footer = () => {
                     }}
                   >
                     <LocationOnIcon style={{ color: '#35A953' }} />
-                    <span style={{ marginLeft: '7px' }}>Support us</span>
+                    <span style={{ marginLeft: '7px' }}>
+                      <a href='/' rel='noopener noreferrer'>
+                        Support us
+                      </a>
+                    </span>
                   </p>
                 </li>
                 <li>
@@ -129,7 +149,11 @@ export const Footer = () => {
                     }}
                   >
                     <ExploreIcon style={{ color: '#FABD04' }} />
-                    <span style={{ marginLeft: '7px' }}>Destinations</span>
+                    <span style={{ marginLeft: '7px' }}>
+                      <a href='/' rel='noopener noreferrer'>
+                        Destinations
+                      </a>
+                    </span>
                   </p>
                 </li>
                 <li>
@@ -141,7 +165,11 @@ export const Footer = () => {
                     }}
                   >
                     <ContactSupportIcon style={{ color: '#658DAF' }} />
-                    <span style={{ marginLeft: '7px' }}>Sponsorships</span>
+                    <span style={{ marginLeft: '7px' }}>
+                      <a href='/' rel='noopener noreferrer'>
+                        Sponsorships
+                      </a>
+                    </span>
                   </p>
                 </li>
               </ul>
@@ -149,7 +177,7 @@ export const Footer = () => {
           </div>
 
           <div className='footer_content'>
-            <h5 className='footer_ch'>Social Media</h5>
+            <h4 className='footer_ch'>Social Media</h4>
             <div>
               <ul className='list-unstyled'>
                 <li>
@@ -233,7 +261,7 @@ export const Footer = () => {
           style={{ marginBottom: '20px' }}
           className='footer-copyright  text-center py-3'
         >
-          © 2020 Copyright:
+          © 2021 Copyright:
           <a href='https://github.com/cleverabhi'> Final Year Project</a>
         </div>
       </footer>
