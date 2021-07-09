@@ -39,7 +39,7 @@ export default function Search({ props }) {
                   id='pincode'
                   value={pincode}
                   onChange={({ target }) => setPincode(target.value)}
-                  type='text'
+                  type='number'
                   required
                 />
                 <span className='fas fa-user'></span>

@@ -144,6 +144,14 @@ export default function Display(props) {
                   Address:{' '}
                   <span className='address_font'>{fetchedData[0].address}</span>
                 </h4>
+                {fetchedData[0].pincode &&
+                fetchedData[0].pincode > 560000 &&
+                fetchedData[0].pincode < 567000 ? (
+                  <h4 className='heading address'>
+                    Location:{' '}
+                    <span className='address_font'>Bengaluru, Karnataka</span>
+                  </h4>
+                ) : null}
               </div>
               <div className='card_group'>
                 <div className='card_content'>

@@ -2,6 +2,7 @@ import React, { createRef } from 'react'
 import './Feedback.scss'
 import axios from 'axios'
 import { useHistory, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 let address = createRef()
 let jiostrength = createRef()
 let jiodata = createRef()
@@ -14,8 +15,14 @@ let bsnldata = createRef()
 let pincode = createRef()
 export default function Feedback({ user }) {
   const history = useHistory()
-   const location = useLocation()
-   var pin = location.state ? location.state : null
+  const location = useLocation()
+  var pin = location.state ? location.state : null
+  useEffect(() => {
+    if (pin == null) {
+      history.push('/search')
+    }
+    // eslint-disable-next-line
+  }, [])
   const handleClick = async (e) => {
     e.preventDefault()
     var addressPattern = '[a-zA-Z]+[ ]+[a-zA-Z]'
@@ -23,7 +30,7 @@ export default function Feedback({ user }) {
     if (res.test(address.current.value) !== true) {
       alert('Enter a valid address')
       address.current.value = null
-      return 
+      return
     }
     var pincodePattern = '^[1-9]{1}[0-9]{2}s{0,1}[0-9]{3}$'
     var re = new RegExp(pincodePattern)
@@ -115,7 +122,7 @@ export default function Feedback({ user }) {
 
           history.push({ pathname: '/search', state: pincode.current.value })
         })
-    }else{
+    } else {
       return
     }
   }
