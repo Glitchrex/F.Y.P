@@ -20,13 +20,6 @@ export default function Error() {
       .then(() => {
         history.push('/feedback')
       })
-
-    // if(user){
-    //   history.pushState('/feedback')
-    // }
-    // else{
-    //   history.pushState('/error')
-    // }
   }
   return (
     <div>

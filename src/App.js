@@ -15,10 +15,9 @@ import { useEffect } from 'react'
 function App() {
   // eslint-disable-next-line no-unused-vars
   const [{ user }, dispatch] = useStateValue()
-  console.log(user)
-  useEffect(()=>{
-Aos.init({duration:2000})
-  },[])
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
   return (
     <>
       <Router>
@@ -35,7 +34,6 @@ Aos.init({duration:2000})
           <Route exact path='/feedbackform' component={FeedbackForm} />
 
           <Route exact path='/feedback'>
-            {console.log(user)}
             {user ? <Feedback user={user} /> : <Error />}
           </Route>
           <Route exact path='/information' component={Information} />

@@ -83,8 +83,6 @@ export default function Display(props) {
       `https://axelrestapi.herokuapp.com/posts/findbypincode/${state}`
     )
     const data = await response.json()
-    // console.log('data', data)
-    // console.log('length of data we got after GET Request', data.length)
     if (data.length === 0) {
       setLength(false)
     } else {
@@ -107,7 +105,6 @@ export default function Display(props) {
       }
       setBestSignalValue(Signalvalue)
       setBestSignalName(Signalname)
-      console.log('1', bestSignalValue, bestSignalName)
       const dataarray = [
         { name: 'Jio', value: data[0].networks.jio.data_speed },
         { name: 'Airtel', value: data[0].networks.airtel.data_speed },
@@ -122,8 +119,6 @@ export default function Display(props) {
       }
       setBestDataValue(Datavalue)
       setBestDataName(Dataname)
-
-      console.log('2', bestDataValue, bestDataName)
     }
   }
   return (
@@ -159,9 +154,6 @@ export default function Display(props) {
                     <div>
                       <h4>
                         Signal:{' '}
-                        {/* <span>
-                          {fetchedData[0].networks.jio.signal_strength}
-                          </span> */}
                         {fetchedData[0].networks.jio.signal_strength === 20 ? (
                           <Poor />
                         ) : fetchedData[0].networks.jio.signal_strength ===
@@ -177,8 +169,6 @@ export default function Display(props) {
                           <Excellent />
                         )}
                       </h4>
-
-                      {/* <br /> */}
                       <h4>
                         Data: {fetchedData[0]?.networks.jio.data_speed}Mbps
                       </h4>
@@ -197,9 +187,6 @@ export default function Display(props) {
                     <div>
                       <h4>
                         Signal:
-                        {/* <span>
-                          {fetchedData[0].networks.airtel.signal_strength}
-                          </span> */}
                         {fetchedData[0].networks.airtel.signal_strength ===
                         20 ? (
                           <Poor />
@@ -216,7 +203,6 @@ export default function Display(props) {
                           <Excellent />
                         )}
                       </h4>
-                      {/* <br /> */}
                       <h4>
                         Data: {fetchedData[0].networks.airtel.data_speed}
                         Mbps
@@ -232,9 +218,6 @@ export default function Display(props) {
                     <div>
                       <h4>
                         Signal:{' '}
-                        {/* <span>
-                          {fetchedData[0].networks.vi.signal_strength}
-                          </span> */}
                         {fetchedData[0].networks.vi.signal_strength === 20 ? (
                           <Poor />
                         ) : fetchedData[0].networks.vi.signal_strength ===
@@ -250,7 +233,6 @@ export default function Display(props) {
                           <Excellent />
                         )}
                       </h4>
-                      {/* <br /> */}
                       <h4>Data: {fetchedData[0].networks.vi.data_speed}Mbps</h4>
                     </div>
                   </div>
@@ -263,9 +245,6 @@ export default function Display(props) {
                     <div>
                       <h4>
                         Signal:{' '}
-                        {/* <span>
-                          {fetchedData[0].networks.bsnl.signal_strength}
-                          </span> */}
                         {fetchedData[0].networks.bsnl.signal_strength === 20 ? (
                           <Poor />
                         ) : fetchedData[0].networks.bsnl.signal_strength ===
@@ -281,7 +260,6 @@ export default function Display(props) {
                           <Excellent />
                         )}
                       </h4>
-                      {/* <br /> */}
                       <h4>
                         Data: {fetchedData[0].networks.bsnl.data_speed}
                         Mbps
@@ -291,7 +269,6 @@ export default function Display(props) {
                 </div>
               </div>
             </div>
-            {/* <div>{getnewFunc()}</div> */}
             <Link to='/search' type='submit'>
               <button style={{ width: '50%' }}>
                 <div>New Pincode</div>
@@ -318,7 +295,6 @@ export default function Display(props) {
               <br />
               OR <br />{' '}
               <div>
-                {console.log(pincodeValue)}
                 <Link
                   to={{
                     pathname: '/feedbackform',

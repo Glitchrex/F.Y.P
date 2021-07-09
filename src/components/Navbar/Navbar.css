@@ -21,8 +21,6 @@ ul {
   font-weight: 500;
   color: black;
 }
-/* 
-*/
 .nav-link:hover {
   text-decoration: none;
   transform: scale(1.02);
@@ -60,7 +58,6 @@ select {
 }
 .select-operator:focus {
   color: #3498db;
-  /* box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73; */
 }
 
 option {
@@ -76,7 +73,3 @@ select::-ms-expand {
     font-size: large;
   }
 }
-/* .nav-items{
-  display: flex;
-
-} */

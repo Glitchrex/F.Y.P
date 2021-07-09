@@ -14,7 +14,6 @@ export default function Search({ props }) {
     e.preventDefault()
     let pincodeval = document.querySelector('#pincode')
     var pattern = '^[1-9]{1}[0-9]{2}s{0,1}[0-9]{3}$'
-    // console.log(pattern)
     var re = new RegExp(pattern)
     if (re.test(pincodeval.value)) {
       history.push({

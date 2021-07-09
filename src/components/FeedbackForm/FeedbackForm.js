@@ -25,13 +25,6 @@ export default function FeedbackForm(props) {
       .then(() => {
         history.push({ pathname: '/feedback', state: state })
       })
-
-    // if(user){
-    //   history.pushState('/feedback')
-    // }
-    // else{
-    //   history.pushState('/error')
-    // }
   }
   return (
     <div>

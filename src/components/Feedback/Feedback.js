@@ -18,15 +18,6 @@ export default function Feedback({ user }) {
    var pin = location.state ? location.state : null
   const handleClick = async (e) => {
     e.preventDefault()
-    // console.log(address.current.value, pincode.current.value)
-    // console.log('JIO', jiostrength.current.value, jiodata.current.value)
-    // console.log(
-    //   'Airtel',
-    //   airtelstrength.current.value,
-    //   airteldata.current.value
-    // )
-    // console.log('VI', vistrength.current.value, vidata.current.value)
-    // console.log('BSNL', bsnlstrength.current.value, bsnldata.current.value)
     var addressPattern = '[a-zA-Z]+[ ]+[a-zA-Z]'
     var res = new RegExp(addressPattern)
     if (res.test(address.current.value) !== true) {
@@ -106,13 +97,11 @@ export default function Feedback({ user }) {
         } 
       }
     }`
-    console.log(output)
     const object = JSON.parse(output)
-    console.log(object)
 
     var confirm = window.confirm('Are you sure you have entered correct data ?')
-    console.log(confirm)
     if (confirm === true) {
+      // eslint-disable-next-line no-unused-vars
       const response = await axios
         .post('https://axelrestapi.herokuapp.com/posts', object, {
           headers: { 'Content-Type': 'application/json' },
@@ -126,7 +115,6 @@ export default function Feedback({ user }) {
 
           history.push({ pathname: '/search', state: pincode.current.value })
         })
-      console.log(response)
     }else{
       return
     }
