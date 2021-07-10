@@ -30,12 +30,13 @@ meter[value] {
   color: aqua;
 }
 
-.heading{
- font-weight: bold;
- font-size: x-large;
+.heading {
+  font-weight: bold;
+  font-size: x-large;
 }
 
-.address_font, .pincode_font{
+.address_font,
+.pincode_font {
   font-weight: 500;
 }
 .card_group {
@@ -53,8 +54,7 @@ meter[value] {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items:center;
-
+  align-items: center;
 }
 
 .card_content {
@@ -88,10 +88,17 @@ meter[value] {
   justify-content: center;
 }
 
-h4{
+h4 {
   margin-left: 10px;
   float: left;
 }
-.button-style_result{
+.button-style_result {
   width: 40%;
+}
+
+@media (max-width: 400px) {
+  .card_content:hover {
+    transform: scale(1.01);
+    box-shadow: none;
+  }
 }
