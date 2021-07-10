@@ -2,11 +2,13 @@ import { useEffect } from 'react'
 import './information.css'
 import Android1 from '../../assets/android1.jpg'
 import Android2 from '../../assets/android2.jpg'
+import EmailIcon from '@material-ui/icons/Email'
 import Android3 from '../../assets/android3.jpg'
 import Android4 from '../../assets/android4.jpg'
 import ios1 from '../../assets/ios1.jpg'
 import ios2 from '../../assets/ios2.jpg'
 import ios3 from '../../assets/ios3.jpg'
+import { Link } from 'react-router-dom'
 export default function Information() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -152,19 +154,41 @@ export default function Information() {
           </p>
         </div>
         <div>
-          <p className='ptag'> <b>
-            
-             Getting all things together
-            </b>
-             </p>
-            
-          </div>
-          <div>
+          <p className='ptag'>
+            {' '}
+            <b>Getting all things together</b>
+          </p>
+        </div>
+        <div>
           <p className='ptag'>
             We would like to know what’s the signal strength at your location?
             Is it good, average, or bad? Also, feel free to reach us for any
             doubts or queries.
           </p>
+        </div>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', width: '500px' }}>
+        <div>
+          <p
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              margin: '15px',
+            }}
+          >
+            <EmailIcon style={{ color: '#5DA8DC' }} />
+            <span style={{ marginLeft: '9px' }}>
+              <a href='mailto: fyp@gmail.com'>fyp@gmail.com</a>
+            </span>
+          </p>
+        </div>
+        <div style={{ width: '200px' }}>
+          <Link style={{ width: '150px' }} to='/' type='submit'>
+            <button>
+              <div className='button-style'>Back</div>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

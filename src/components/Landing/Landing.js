@@ -14,7 +14,7 @@ window.scrollTo(0, 0)
           <iframe
             className='frame'
             title='map'
-            src='https://www.google.com/maps/d/embed?mid=1ymtEZ2oeD0waWzpE-17HVxgJlHl3QF5q'
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.8865400715!2d77.49085268592562!3d12.953959987138402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1625886027503!5m2!1sen!2sin'
             width='300'
             height='450'
           ></iframe>
@@ -282,45 +282,31 @@ window.scrollTo(0, 0)
               </div>
               <div data-aos='fade-left' className='service_body'>
                 <div>
-                  <h4>Connect with US</h4>
+                  <h3 style={{ color: 'black' }}>Connect with US</h3>
                 </div>
                 <div>
-                  <h6>
+                  <h4>
                     To know about Network providers which provides better
                     calling and data services in your area.
-                  </h6>
+                  </h4>
                 </div>
-                <div className='learn_more'>
-                  <button
-                    className='buttonsStyle'
-                    style={{ paddingLeft: '10px', paddingRight: '10px' }}
-                  >
-                    Learn more
-                  </button>
-                </div>
+                <div className='learn_more'></div>
               </div>
             </div>
             <br />
             <div className='service_content service_content_wise'>
               <div className='service_body' data-aos='fade-right'>
                 <div>
-                  <h4>Compatible across devices</h4>
+                  <h3 style={{ color: 'black' }}>Compatible across devices</h3>
                   <br />
                 </div>
                 <div>
-                  <h6>
+                  <h4>
                     It's a web service that we provide, so you can have access
                     to our databse across various devices.
-                  </h6>
+                  </h4>
                 </div>
-                <div className='learn_more'>
-                  <button
-                    className='buttonsStyle'
-                    style={{ paddingLeft: '10px', paddingRight: '10px' }}
-                  >
-                    Learn more
-                  </button>
-                </div>
+                <div className='learn_more'></div>
               </div>
               <div data-aos='fade-left' className='service_logo'>
                 <svg
@@ -811,23 +797,16 @@ window.scrollTo(0, 0)
               </div>
               <div data-aos='fade-left' className='service_body'>
                 <div>
-                  <h4>Help Us to Help Others</h4>
+                  <h3 style={{ color: 'black' }}>Help Us to Help Others</h3>
                   <br />
                 </div>
                 <div>
-                  <h6>
+                  <h4>
                     You can also help others by giving us information about
                     network providers in your area.
-                  </h6>
+                  </h4>
                 </div>
-                <div className='learn_more'>
-                  <button
-                    className='learn_more_button buttonsStyle'
-                    style={{ paddingLeft: '10px', paddingRight: '10px' }}
-                  >
-                    Learn more
-                  </button>
-                </div>
+                <div className='learn_more'></div>
               </div>
             </div>
           </div>
