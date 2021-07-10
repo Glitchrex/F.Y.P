@@ -20,16 +20,16 @@ export const Footer = () => {
         <div className='footer'>
           <div className='footer_content'>
             <h4>Accessing Signal and giving location of device</h4>
-            
+
             <p>
               The main idea behind our project is to help everyone to stay
-              connected by providing them 
-              details of all the available Service providers in their area for
-              calling and internet connectivity.
-
+              connected by providing them details of all the available Service
+              providers in their area for calling and internet connectivity.
             </p>
             <p>
-              For the time being we have limited data, but you can also contribute by providing us info. It would be a great help if you contribute.
+              For the time being we have limited data, but you can also
+              contribute by providing us info. It would be a great help if you
+              contribute.
             </p>
           </div>
 
@@ -189,7 +189,17 @@ export const Footer = () => {
                     }}
                   >
                     <GitHubIcon style={{ color: 'black' }} />
-                    <span style={{ marginLeft: '7px' }}>Github</span>
+                    <span style={{ marginLeft: '7px' }}>
+                      {' '}
+                      <a
+                        href='https://github.com/Glitchrex/F.Y.P'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        {' '}
+                        Github
+                      </a>
+                    </span>
                   </p>
                 </li>
                 <li>
@@ -258,7 +268,7 @@ export const Footer = () => {
         </div>
         <hr />
         <div
-          style={{ marginBottom: '20px', fontSize:"large" }}
+          style={{ marginBottom: '20px', fontSize: 'large' }}
           className='footer-copyright  text-center py-3'
         >
           © 2021 <a href='https://github.com/cleverabhi'> Final Year Project</a>
